@@ -1,0 +1,225 @@
+:root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --texto: #c9d1d9;
+    --texto-suave: #8b949e;
+    --acento: #39d353;
+    --acento-suave: #2ea043;
+    --borde: #30363d;
+    --error: #f85149;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--texto);
+    font-family: 'Courier New', Consolas, monospace;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--acento);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--borde);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    color: var(--acento);
+    margin: 0;
+}
+
+.btn {
+    background: var(--acento);
+    color: #0d1117;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.btn:hover {
+    background: var(--acento-suave);
+    text-decoration: none;
+}
+
+.filtros {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filtros input,
+.filtros select {
+    background: var(--bg-card);
+    border: 1px solid var(--borde);
+    color: var(--texto);
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.filtros button {
+    background: var(--bg-card);
+    border: 1px solid var(--acento);
+    color: var(--acento);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+.filtros button:hover {
+    background: var(--acento);
+    color: #0d1117;
+}
+
+.lista-comandos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.tarjeta {
+    background: var(--bg-card);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.tarjeta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-header code {
+    color: var(--acento);
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+.etiqueta {
+    background: rgba(57, 211, 83, 0.15);
+    color: var(--acento);
+    border: 1px solid var(--acento-suave);
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.descripcion {
+    color: var(--texto);
+    margin: 0.5rem 0;
+}
+
+.caso-uso {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    border-top: 1px solid var(--borde);
+    padding-top: 0.75rem;
+}
+
+.form-eliminar {
+    margin: 0;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: var(--error);
+    padding: 0;
+}
+.btn-eliminar:hover {
+    text-decoration: underline;
+}
+
+.vacio {
+    color: var(--texto-suave);
+    font-style: italic;
+}
+
+.form-comando {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 500px;
+}
+
+.form-comando label {
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.form-comando input,
+.form-comando textarea {
+    background: var(--bg-card);
+    border: 1px solid var(--borde);
+    color: var(--texto);
+    padding: 0.6rem;
+    border-radius: 4px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.form-comando input:focus,
+.form-comando textarea:focus {
+    outline: none;
+    border-color: var(--acento);
+}
+
+.form-comando button {
+    margin-top: 1rem;
+    background: var(--acento);
+    border: none;
+    color: #0d1117;
+    padding: 0.7rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+}
+.form-comando button:hover {
+    background: var(--acento-suave);
+}
+
+
+.errores {
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid var(--error);
+    color: var(--error);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.errores ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}

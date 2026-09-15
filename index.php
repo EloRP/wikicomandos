@@ -34,11 +34,11 @@ $lenguajes = $pdo->query("SELECT DISTINCT lenguaje FROM comandos ORDER BY lengua
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CommandWiki</title>
+    <title>WikiComandos</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <header>
-    <h1>&gt; nexo_comandos</h1>
+    <h1>&gt; wiki_comandos</h1>
     <a href="add.php" class="btn">Nuevo comando</a>
 </header>
 
@@ -58,7 +58,7 @@ $lenguajes = $pdo->query("SELECT DISTINCT lenguaje FROM comandos ORDER BY lengua
 
     <main>
         <?php if (empty($comandos)): ?>
-            <p class="vacio">No se encontraron comandos.</p>
+            <p class="vacio">No se encontraron comandos guardados.</p>
         <?php else: ?>
             <div class="lista-comandos"></div>
             <?php foreach ($comandos as $c): ?>
@@ -73,7 +73,11 @@ $lenguajes = $pdo->query("SELECT DISTINCT lenguaje FROM comandos ORDER BY lengua
                     <?php endif; ?>
                     <div class="acciones">
                         <a href="edit.php?id=<?= $c['id'] ?>">Editar</a>
-                        <a href="delete.php?id=<?= $c['id'] ?>" onclick="return confirm('Eliminar este comando?')">Eliminar</a>
+                        <form method="POST" action="delete.php" class="form-eliminar"
+                            onsubmit="return confirm('¿Eliminar este comando?')">
+                            <input type="hidden" name="id" value="<?= $c['id'] ?>">
+                            <button type="submit" class="btn-eliminar">Eliminar</button>
+                        </form>
                     </div>
                 </article>
             <?php endforeach; ?>
@@ -81,4 +85,5 @@ $lenguajes = $pdo->query("SELECT DISTINCT lenguaje FROM comandos ORDER BY lengua
         <?php endif; ?>
     </main>
 </body>
+
 </html>

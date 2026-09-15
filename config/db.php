@@ -6,7 +6,6 @@ try {
     $pdo = new PDO('sqlite:' . $dbPath);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    //Creamos tabla si no existe...
     $pdo->exec("CREATE TABLE IF NOT EXISTS comandos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         comando TEXT NOT NULL,
