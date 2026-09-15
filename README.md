@@ -22,19 +22,7 @@ Abre tu terminal y clona el proyecto en tu directorio de trabajo local (o descá
 git clone https://github.com/EloRP/wikicomandos.git
 cd wikicomandos
 
-Asegúrate de que la estructura de carpetas del proyecto sea coherente con la conexión a la base de datos (definida en config/db.php), la cual busca la base de datos dentro de una carpeta llamada database:
-wikicomandos/
-│
-├── assets/
-│   └── css/
-│       └── styles.css
-├── config/
-│   └── db.php
-├── add.php
-├── delete.php
-├── edit.php
-└── index.php
-(Si la carpeta database/ no existe en el repositorio raíz, créala manualmente con mkdir database para evitar errores de ruta).
+Asegúrate de que la estructura de carpetas del proyecto sea coherente con la conexión a la base de datos (definida en config/db.php), la cual busca la base de datos dentro de una carpeta llamada database.
 
 La forma más rápida de ejecutar el proyecto sin configurar servidores complejos (como Apache o Nginx) es utilizando el servidor web integrado de PHP.
 Abre tu terminal en la raíz del proyecto (command-wiki/).
