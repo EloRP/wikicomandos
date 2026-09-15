@@ -32,3 +32,5 @@ php -S localhost:8000
 7. La primera vez que cargue la página, el script detectará si la base de datos SQLite existe; si no, la creará de manera automática junto con la tabla comandos gracias a la configuración en config/db.php. Ya puedes empezar a añadir y gestionar tus comandos.
 
 Las contribuciones, mejoras y sugerencias son bienvenidas. Si deseas proponer nuevas características, haz un Fork del proyecto, crea una rama con tus cambios y abre un Pull Request.
+
+‼️‼️PROYECTO AÚN EN CONSTRUCCIÓN‼️‼️
